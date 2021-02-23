@@ -56,12 +56,12 @@ export default function Banner({ times, setTimes }) {
 
     return (
         <div className="banner">
-            <div className="banner-title">LSESU HKPASS LSE Forum 2021</div>
+            <div className="banner-title">各環節用時</div>
             <>{
                 times.map((time, idx) => (
                     <div key={idx} className="banner-block" onClick={() => handleRemove(idx)}>
                         <span>{renderStage(time.stage)} </span>
-                        <span>{renderTime({minutes: time.minutes, seconds: time.seconds})}</span>
+                        <span style={{color: time.color}}>{renderTime({minutes: time.minutes, seconds: time.seconds})}</span>
                     </div>
                 ))    
             }</>

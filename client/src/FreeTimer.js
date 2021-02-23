@@ -23,12 +23,14 @@ export default function MyStopwatch({ maxTime, setTimes, aff, neg }) {
             {
                 stage: "free_aff",
                 seconds: affTime.seconds,
-                minutes: affTime.minutes
+                minutes: affTime.minutes,
+                color: timeColor({minutes: affTime.minutes, seconds: affTime.seconds})
             },
             {
                 stage: "free_neg",
                 seconds: negTime.seconds,
-                minutes: negTime.minutes
+                minutes: negTime.minutes,
+                color: timeColor({minutes: negTime.minutes, seconds: negTime.seconds})
             }
         ]))
         clear();

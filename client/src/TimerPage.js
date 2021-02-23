@@ -39,7 +39,7 @@ export default function TimerPage() {
             case "neg4":
                 return (<Timer maxTime={isFinal ? 5 : 4} setTimes={setTimes} stage={stage} teamName={neg} teamSide="neg" fullSize={true} />)
             case "floor":
-                return (<><Timer maxTime={1} setTimes={setTimes} stage={stage} teamName="Question" fullSize={false} /> <Timer maxTime={1} setTimes={setTimes} stage={stage} teamName="Response" fullSize={false} /></>)
+                return (<><Timer maxTime={1} setTimes={setTimes} stage={stage} teamName="發問/準備" fullSize={false} /> <Timer maxTime={1} setTimes={setTimes} stage={stage} teamName="回應" fullSize={false} /> <Timer maxTime={10} setTimes={setTimes} stage={stage} teamName="總時間" fullSize={false} /></>)
             case "prep":
                 return (<Timer maxTime={isFinal ? 3 : 1} setTimes={setTimes} stage={stage} teamName="" fullSize={true} />)
             case "free":

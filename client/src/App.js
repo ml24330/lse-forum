@@ -21,7 +21,7 @@ function App() {
             <About />
           </Route>
         </Switch>
-        <img src={logo} alt="LSESU HKPASS" style={{position: "fixed", height: "100px", width: "auto", left: "10px", bottom: "10px", borderRadius: "50px", pointerEvents: "none"}}/>
+        <a href="https://www.lsesuhkpass.co.uk/" target="_blank" rel="noreferrer"><img src={logo} alt="LSESU HKPASS" style={{position: "fixed", height: "100px", width: "auto", left: "10px", bottom: "10px", borderRadius: "50px"}}/></a>
       </div>
     </Router>
   )

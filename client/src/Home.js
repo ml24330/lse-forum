@@ -23,7 +23,7 @@ export default function Home() {
       </div>
       <Form className="panel">
         <Form.Group controlId="motion" className="row">
-          <Form.Label>Motion:</Form.Label><Form.Control type="text" placeholder="Affirmative motion title..." value={motion} onChange={e => setMotion(e.target.value)}></Form.Control>
+          <Form.Label>Motion:</Form.Label><Form.Control type="text" placeholder="Motion..." value={motion} onChange={e => setMotion(e.target.value)}></Form.Control>
         </Form.Group>
         <Form.Group controlId="aff" className="row">
           <Form.Label>Affirmative:</Form.Label>
@@ -48,9 +48,10 @@ export default function Home() {
         </Form.Group>
         <Form.Group className="row">
           <Button variant={sanityCheck() ? "warning" : "danger"} onClick={e => e.preventDefault()} type="submit" style={{fontWeight: "bold", marginTop: "10px"}}>
-            {sanityCheck() ? (<Link to={`/timer?motion=${motion}&aff=${aff}&neg=${neg}&isFinal=${isFinal}`}>Submit</Link>) : "Form incomplete!"}</Button>
+            {sanityCheck() ? (<Link style={{textDecoration: "none"}} to={`/timer?motion=${motion}&aff=${aff}&neg=${neg}&isFinal=${isFinal}`}>Submit</Link>) : "Form incomplete!"}</Button>
         </Form.Group>
       </Form>
+      <div style={{position: "fixed", right: "15px", bottom: "0px"}}><Link to="/about"><Button variant="success" style={{marginBottom: "20px", fontSize: "20px", color: "yellow"}}>Manual</Button></Link></div>
     </div>
   );
 }
