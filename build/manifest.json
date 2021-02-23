@@ -1,0 +1,8 @@
+{
+  "short_name": "Timekeeper",
+  "name": "LSE Forum 2021 Timekeeper",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
