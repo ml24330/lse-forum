@@ -68,7 +68,7 @@ export default function TimerPage() {
                         <option value="neg4">反方結辯 ({isFinal ? "五分鐘" : "四分鐘"})</option>
                         <option value="aff4">正方結辯 ({isFinal ? "五分鐘" : "四分鐘"})</option>
                     </Form.Control>
-                    <h2 style={{width: "100%", textAlign: "center"}}>正方辯題： {motion}</h2>
+                    <h2 style={{width: "100%", textAlign: "center"}}>辯題： {motion}</h2>
                 </Form>
             {renderSwitch(stage)}
             </div>
