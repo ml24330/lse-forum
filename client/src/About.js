@@ -45,7 +45,7 @@ export default function About() {
             <img src={p8} alt="p8" />
             <p className="image-desc">Image 8</p>
             <p className="text">As shown in Image 9, if you accidentally submitted a record of the time, you can click on the record in the sidebar and a pop-up will give you the option to remove the incorrect entry.</p>
-            <p className="text">Also remember you should not press finish during preparation stages. This includes preparation for the final speaker and preparation during the floor in the final event.</p>
+            <p className="text">Pressing finish for the preparation of final speaker stage will not post anything to the sidebar.</p>
             <img src={p9} alt="p9" />
             <p className="image-desc">Image 9</p>
             <p className="text">At the end of the match, take a screenshot of the timekeeping page for reference. Image 10 shows what this may look like.</p>

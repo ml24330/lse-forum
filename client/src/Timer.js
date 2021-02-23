@@ -16,7 +16,7 @@ export default function MyStopwatch({ maxTime, setTimes, stage, teamName, teamSi
   const teamSide = _teamSide === "aff" ? "Affirmative" : _teamSide === "neg" ? "Opposition" : _teamSide;
 
   const publish = () => {
-      if(stage === "prep" || teamName === "總時間") {
+      if(stage === "prep") {
           reset();
           return;
       }
@@ -34,7 +34,7 @@ export default function MyStopwatch({ maxTime, setTimes, stage, teamName, teamSi
         setTimes(times => ([
             ...times,
             {
-                stage: teamName === "發問/準備" ? "floor_q" : "floor_res",
+                stage: teamName === "發問/準備" ? "floor_q" : teamName === "回應" ? "floor_res" : "floor_total",
                 seconds,
                 minutes,
                 color: timeColor()

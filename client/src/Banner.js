@@ -10,6 +10,8 @@ export default function Banner({ times, setTimes }) {
                 return "發問/準備";
             case "floor_res":
                 return "回應發問";
+            case "floor_total":
+                return "發問總時";
             case "aff1":
                 return "正方主辯";
             case "aff2":
