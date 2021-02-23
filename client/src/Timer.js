@@ -17,6 +17,7 @@ export default function MyStopwatch({ maxTime, setTimes, stage, teamName, teamSi
 
   const publish = () => {
       if(stage === "prep" || teamName === "總時間") {
+          reset();
           return;
       }
       if(stage !== "floor") {

@@ -7,7 +7,7 @@ export default function Banner({ times, setTimes }) {
     const renderStage = stage => {
         switch(stage) {
             case "floor_q":
-                return "台下發問";
+                return "發問/準備";
             case "floor_res":
                 return "回應發問";
             case "aff1":
