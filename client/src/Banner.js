@@ -65,9 +65,9 @@ export default function Banner({ times, setTimes }) {
                     </div>
                 ))    
             }</>
-            <Button variant="warning" style={{position: "absolute", bottom: "5px", width: "70%", right: "15%", fontWeight: "bold"}}>
-                <Link to="/" style={{textDecoration: "none"}}>返回主頁</Link>
-            </Button>
+            <Link to="/" style={{textDecoration: "none"}}><Button variant="warning" style={{position: "absolute", bottom: "15px", width: "70%", right: "15%", fontWeight: "bold"}}>
+                返回主頁
+            </Button></Link>
         </div>
     )
 }

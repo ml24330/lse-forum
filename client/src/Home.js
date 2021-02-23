@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import background from './background.jpeg';
 
 const uni_list = ["University of Birmingham", "Durham University", "University of Exeter", "Imperial College London", "King’s College London", "Lancaster University", "London School of Economics", "University College London", "University of Warwick", "York University"];
 
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <div className="App">
+      <img src={background} alt="background" style={{position: "absolute", top: "0", right: "-220px", opacity: "0.19", zIndex: "-9999", height: "100vh", width: "calc(100vw + 220px)"}}/>
       <div className="title">
         LSESU HKPASS LSE Forum 2021 Timekeeper's Portal
       </div>
@@ -45,7 +47,7 @@ export default function Home() {
           <Form.Label>Final event?</Form.Label> <Form.Control type="checkbox" id="final" checked={isFinal} onChange={e => setIsFinal(e.target.checked)}></Form.Control>
         </Form.Group>
         <Form.Group className="row">
-          <Button variant={sanityCheck() ? "warning" : "danger"} type="submit" style={{fontWeight: "bold", marginTop: "10px"}}>
+          <Button variant={sanityCheck() ? "warning" : "danger"} onClick={e => e.preventDefault()} type="submit" style={{fontWeight: "bold", marginTop: "10px"}}>
             {sanityCheck() ? (<Link to={`/timer?motion=${motion}&aff=${aff}&neg=${neg}&isFinal=${isFinal}`}>Submit</Link>) : "Form incomplete!"}</Button>
         </Form.Group>
       </Form>
