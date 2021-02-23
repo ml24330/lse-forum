@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.title {
+  font-size: 30px;
+  margin: 50px 10px;
+  font-weight: bold;
+}
+
+.panel {
+  background-color: aliceblue;
+  width: 50%;
+  margin: auto;
+  padding: 50px;
+}
+
+.banner {
+  position: absolute;
+  background-color: aliceblue;
+  width: 175px;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 1% 0.5%;
+}
+
+.banner-title {
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: cursive;
+  margin-bottom: 5px;
+}
+
+.banner-block {
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  margin: 2.5px 0;
+}
+
+.banner-block:nth-child(2n) {
+  background-color: gray;
+  color: white
+}
+
+.banner-block:nth-child(2n-1) {
+  background-color: white;
+}
