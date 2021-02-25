@@ -30,7 +30,7 @@ export default function About() {
             <img src={p3} alt="p3" />
             <p className="image-desc">Image 3</p>
             <p className="text">As seen in Images 4, 5, and 6, the timer will change colors 30 seconds before the time limit, at the time limit, and after 15 seconds of buffer time. As the timekeeper, you should inform the speaker via Zoom chat at these times.</p>
-            <p className="text">Remember there is no buffer time during free debate and floor.</p>
+            <p className="text">Remember there is no buffer time during free debate and floor questions.</p>
             <img src={p4} alt="p4" />
             <p className="image-desc">Image 4</p>
             <img src={p5} alt="p5" />
