@@ -6,9 +6,16 @@ const app = express();
 
 const PORT = process.env.PORT || 8000;
 
+const middleWare = (req, res, next) => {
+    if (!req.secure) {
+        res.redirect('https://' + req.get('Host') + req.url);
+    } else
+        next();
+    };
+
 app.use(express.static(path.resolve(__dirname, "build")));
 
-app.get("*", (req, res) => {
+app.get("*", middleWare, (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 
