@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import useLocalStorage from './useLocalStorage.js';
 import Timer from './Timer.js';
 import FreeTimer from './FreeTimer.js';
 import Banner from './Banner.js';
@@ -9,7 +10,7 @@ export default function TimerPage() {
     
     const location = useLocation();
 
-    const [times, setTimes] = useState([]);
+    const [times, setTimes] = useLocalStorage("time", []);
 
     const [stage, setStage] = useState("");
 

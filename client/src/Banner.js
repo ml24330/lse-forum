@@ -37,6 +37,10 @@ export default function Banner({ times, setTimes }) {
         }
     }
 
+    const clearLocalStorage = () => {
+        window.localStorage.clear();
+    }
+
     const renderTime = ({minutes, seconds}) => {
         if(seconds < 10) {
             return `${minutes}:0${seconds}`;
@@ -60,14 +64,14 @@ export default function Banner({ times, setTimes }) {
         <div className="banner">
             <div className="banner-title">各環節用時</div>
             <>{
-                times.map((time, idx) => (
+                times && times.map((time, idx) => (
                     <div key={idx} className="banner-block" onClick={() => handleRemove(idx)}>
                         <span>{renderStage(time.stage)} </span>
                         <span style={{color: time.color}}>{renderTime({minutes: time.minutes, seconds: time.seconds})}</span>
                     </div>
                 ))    
             }</>
-            <Link to="/" style={{textDecoration: "none"}}><Button variant="warning" style={{position: "absolute", bottom: "15px", width: "70%", right: "15%", fontWeight: "bold"}}>
+            <Link onClick={clearLocalStorage} to="/" style={{textDecoration: "none"}}><Button variant="warning" style={{position: "absolute", bottom: "15px", width: "70%", right: "15%", fontWeight: "bold"}}>
                 返回主頁
             </Button></Link>
         </div>
