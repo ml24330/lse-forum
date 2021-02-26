@@ -7,15 +7,15 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.use((req, res, next) => {
-    if (!req.secure && process.env.NODE_ENV === 'production') {
-        res.redirect('https://' + req.get('Host'));
+    if (req.headers['x-forwarded-proto'] !== 'https' && process.env.NODE_ENV === 'production') {
+        return res.redirect('https://' + req.get('Host'));
     } else
-        next();
+        return next();
 });
 
 app.use(express.static(path.resolve(__dirname, "build")));
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 
