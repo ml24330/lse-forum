@@ -44,7 +44,7 @@ export default function TimerPage() {
             case "prep":
                 return (<Timer maxTime={isFinal ? 3 : 1} setTimes={setTimes} stage={stage} teamName="" fullSize={true} />)
             case "free":
-                return (<FreeTimer maxTime={isFinal ? 4 : 2} setTimes={setTimes} aff={aff} neg={neg} />)
+                return (<FreeTimer maxTime={isFinal ? 4 : 4} setTimes={setTimes} aff={aff} neg={neg} />)
             default:
                 return (<></>)
         }
@@ -64,7 +64,7 @@ export default function TimerPage() {
                         <option value="aff3">正方二副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         <option value="neg3">反方二副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         {isFinal && <option value="floor">台下發問 (十分鐘)</option>} */}
-                        <option value="free">自由辯論 ({isFinal ? "各四分鐘" : "各兩分鐘"})</option>
+                        <option value="free">自由辯論 ({isFinal ? "各四分鐘" : "各四分鐘"})</option>
                         {/* <option value="prep">準備結辯 ({isFinal ? "三分鐘" : "一分鐘"})</option>
                         <option value="neg4">反方結辯 ({isFinal ? "五分鐘" : "四分鐘"})</option>
                         <option value="aff4">正方結辯 ({isFinal ? "五分鐘" : "四分鐘"})</option> */}
