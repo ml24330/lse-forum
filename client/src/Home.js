@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import background from './background.jpeg';
 
-const uni_list = ["University of Birmingham", "Durham University", "University of Exeter", "Imperial College London", "King’s College London", "Lancaster University", "London School of Economics", "University College London", "University of Warwick", "York University"];
+const uni_list = ["Friendly Debate", "University of Birmingham", "Durham University", "University of Exeter", "Imperial College London", "King’s College London", "Lancaster University", "London School of Economics", "University College London", "University of Warwick", "York University"];
 
 export default function Home() {
   const [motion, setMotion] = useState("");
