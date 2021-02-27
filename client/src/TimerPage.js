@@ -24,7 +24,7 @@ export default function TimerPage() {
     const renderSwitch = stage => {
         switch(stage) {
             case "aff1":
-                return (<Timer maxTime={isFinal ? 4 : 1} setTimes={setTimes} stage={stage} teamName={aff} teamSide="aff" fullSize={true} />)
+                return (<Timer maxTime={isFinal ? 4 : 3} setTimes={setTimes} stage={stage} teamName={aff} teamSide="aff" fullSize={true} />)
             case "aff2":
                 return (<Timer maxTime={isFinal ? 4 : 3} setTimes={setTimes} stage={stage} teamName={aff} teamSide="aff" fullSize={true} />)
             case "aff3":
@@ -32,7 +32,7 @@ export default function TimerPage() {
             case "aff4":
                 return (<Timer maxTime={isFinal ? 5 : 4} setTimes={setTimes} stage={stage} teamName={aff} teamSide="aff" fullSize={true} />)
             case "neg1":
-                return (<Timer maxTime={isFinal ? 4 : 1} setTimes={setTimes} stage={stage} teamName={neg} teamSide="neg" fullSize={true} />)
+                return (<Timer maxTime={isFinal ? 4 : 3} setTimes={setTimes} stage={stage} teamName={neg} teamSide="neg" fullSize={true} />)
             case "neg2":
                 return (<Timer maxTime={isFinal ? 4 : 3} setTimes={setTimes} stage={stage} teamName={neg} teamSide="neg" fullSize={true} />)
             case "neg3":
@@ -44,7 +44,7 @@ export default function TimerPage() {
             case "prep":
                 return (<Timer maxTime={isFinal ? 3 : 1} setTimes={setTimes} stage={stage} teamName="" fullSize={true} />)
             case "free":
-                return (<FreeTimer maxTime={isFinal ? 4 : 4} setTimes={setTimes} aff={aff} neg={neg} />)
+                return (<FreeTimer maxTime={isFinal ? 4 : 2} setTimes={setTimes} aff={aff} neg={neg} />)
             default:
                 return (<></>)
         }
@@ -57,17 +57,17 @@ export default function TimerPage() {
                 <Form onSubmit={e => e.preventDefault()}>
                     <Form.Control as="select" value={stage} onChange={e => setStage(e.target.value)} style={{width: "50%", margin: "10px auto"}}>
                         <option value="">選擇環節...</option>
-                        <option value="aff1">正方主辯 ({isFinal ? "四分鐘" : "一分鐘"})</option>
-                        <option value="neg1">反方主辯 ({isFinal ? "四分鐘" : "一分鐘"})</option>
-                        {/* <option value="aff2">正方一副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
+                        <option value="aff1">正方主辯 ({isFinal ? "四分鐘" : "三分鐘"})</option>
+                        <option value="neg1">反方主辯 ({isFinal ? "四分鐘" : "三分鐘"})</option>
+                        <option value="aff2">正方一副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         <option value="neg2">反方一副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         <option value="aff3">正方二副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         <option value="neg3">反方二副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
-                        {isFinal && <option value="floor">台下發問 (十分鐘)</option>} */}
-                        <option value="free">自由辯論 ({isFinal ? "各四分鐘" : "各四分鐘"})</option>
-                        {/* <option value="prep">準備結辯 ({isFinal ? "三分鐘" : "一分鐘"})</option>
+                        {isFinal && <option value="floor">台下發問 (十分鐘)</option>}
+                        <option value="free">自由辯論 ({isFinal ? "各四分鐘" : "各兩分鐘"})</option>
+                        <option value="prep">準備結辯 ({isFinal ? "三分鐘" : "一分鐘"})</option>
                         <option value="neg4">反方結辯 ({isFinal ? "五分鐘" : "四分鐘"})</option>
-                        <option value="aff4">正方結辯 ({isFinal ? "五分鐘" : "四分鐘"})</option> */}
+                        <option value="aff4">正方結辯 ({isFinal ? "五分鐘" : "四分鐘"})</option>
                     </Form.Control>
                     <h2 style={{width: "100%", textAlign: "center"}}>辯題： {motion}</h2>
                 </Form>
