@@ -58,8 +58,8 @@ export default function TimerPage() {
                     <Form.Control as="select" value={stage} onChange={e => setStage(e.target.value)} style={{width: "50%", margin: "10px auto"}}>
                         <option value="">選擇環節...</option>
                         <option value="aff1">正方主辯 ({isFinal ? "四分鐘" : "一分鐘"})</option>
-                        {/* <option value="neg1">反方主辯 ({isFinal ? "四分鐘" : "一分鐘"})</option>
-                        <option value="aff2">正方一副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
+                        <option value="neg1">反方主辯 ({isFinal ? "四分鐘" : "一分鐘"})</option>
+                        {/* <option value="aff2">正方一副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         <option value="neg2">反方一副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         <option value="aff3">正方二副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
                         <option value="neg3">反方二副 ({isFinal ? "四分鐘" : "三分鐘"})</option>
