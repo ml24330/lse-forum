@@ -22,7 +22,7 @@
 }
 
 .banner {
-  position: absolute;
+  position: fixed;
   background-color: aliceblue;
   width: 175px;
   right: 0;

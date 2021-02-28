@@ -64,9 +64,9 @@ export default function MyStopwatch({ maxTime, setTimes, stage, teamName, teamSi
 
   return (
     <div style={{textAlign: 'center', backgroundColor: "#e6ffee", borderRadius: "20px", margin: "10px", padding: "10px 5px"}}>
-      <h1 style={{fontSize: fullSize ? "50px" : "30px"}}>{teamName}</h1>
-      <h2 style={{margin: "0"}}>{teamSide === "Affirmative" ? "正方" : teamSide === "Opposition" ? "反方" : ""}</h2>
-      <div style={{fontSize: fullSize ? '250px' : '60px', color: timeColor() }}>
+      <h1 style={{fontSize: fullSize ? "7vh" : "5vh"}}>{teamName}</h1>
+      <h2 style={{margin: "0", fontSize: "5vh"}}>{teamSide === "Affirmative" ? "正方" : teamSide === "Opposition" ? "反方" : ""}</h2>
+      <div style={{fontSize: fullSize ? '40vh' : '10vh', color: timeColor() }}>
         <span>{minutes}</span>:<span>{displaySecond(seconds)}</span>
       </div>
       <Button variant="success" style={{margin: "0 3px"}} onClick={start}>開始</Button>
